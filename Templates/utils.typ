@@ -141,3 +141,40 @@
                 .map(_ => []), ..val)
 }
 
+#let draw-vector-field(dydx:(x,y)=>x + y, domain:(-3,3),range:(-3,3),step:1,stroke-width:0.8, size:(8,8)) = {
+
+return cetz.canvas({
+  import cetz.draw: *
+  import cetz-plot: *
+  set-style(stroke:2pt)
+  plot.plot(size:size,
+  x-tick-step: none,y-tick-step: none, 
+  x-label:[$x$],y-label:[$y$],
+  axis-style: "school-book",
+  x-min:domain.at(0),x-max:domain.at(1),
+  y-min:range.at(0),y-max:range.at(1),
+  {
+    let sty = (stroke:blue+1pt)
+    
+    let x-val = domain.at(0) + step/2
+    let y-val = range.at(0) + step/2
+
+    while (x-val < domain.at(1)){
+      while (y-val < range.at(1)){
+
+        let m = dydx(x-val, y-val)
+        let norm-m = calc.sqrt(m*m + 1)
+        let dy = stroke-width * m / norm-m
+        let dx = stroke-width * 1 / norm-m
+        plot.add(((x-val - dx,y-val - dy),(x-val + dx,y-val + dy)),
+        style:sty)
+
+        y-val += step
+      }
+      y-val = range.at(0)
+      x-val += step
+    }
+  })
+
+  })
+}

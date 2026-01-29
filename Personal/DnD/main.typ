@@ -268,6 +268,71 @@ Without a better clue for now, you set off out of the city. At least both you an
   Wren's unicorn form lends protection to those nearby. You and your allies gain advantage on all ability checks made to detect creatures in Wren's aura. In addition, if you cast a spell using a spell slot that restores hit points to any creature whilst inside the aura, each creature of your choice within the aura regains hitpoints equal to your druid level.
 ]
 
+#pagebreak()
+#begin-item[
+  = Summon Beast
+  === Casting Time
+  1 action \
+  === Range
+  90 feet \
+  === Components
+  V, S, M (a feather, a tuft of fur, and fish tail inside a gilded acorn worth atleast 200 gp) \
+  === Duration
+  Concentration, up to 1 hour
+
+  You call forth a bestial spirit. It manifests in an un-occupied space that you can see within range. This corporeal form uses the Bestial Spirit stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends. \
+  #bump()The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger.
+]
+
+#begin-item[
+  = Healing Spirit
+=== Casting time
+  1 bonus action \
+  === Range 
+  60 feet \
+  === Components
+  V, S \
+  === Duration
+  Concentration, up to 1 minute
+
+  You call forth a nature spirit to soothe the wounded. The intangible spirit appears in a space that is a 5-foot cube you can see within range. The spirit looks like a transparent beast or fey (your choice). \
+  #bump()Until the spell ends, whenever you or a creature you can see moves into the spirit's space for the first time on a turn or starts its turn there, you can cause the spirit to restore 1d6 hit points to that creature (no action required). The spirit can't heal constructs or undead. \
+  #bump()As a bonus action on your turn, you can move the Spirit up to 30 feet to a space you can see. The spirit can heal a number of times equal to 1 + your spellcasting ability modifier (minimum of twice). After healing that number of times, the spirit disappears.
+
+  === At Higher Levels
+  When you cast this spell using a spell slot of 3rd level or higher, the healing increases 1d6 for each slot level above 2nd.
+]
+
+
+#v(13cm)
+#begin-stat[
+  #stat.statheading("Bestial Spirit", desc:"Small beast")
+  #stat.mainstats(ac: "11 + the level of the spell (natural armour)", hp-etc: "20 (Air only) or 30 (Land and Water only) + 5 for each spell level above 2nd", speed: "30ft.; climb 30ft. (Land only); fly 60ft. (Air only; swim 30ft. (Water only)")
+
+  #stat.ability(18, 11, 16, 4, 14, 5)
+  #stat.skill("Senses", [darkvision 60 ft., passive Perception 12]) \
+  #stat.skill("Languages", [understands the languages you speak]) \
+  #stat.skill("Proficiency Bonus (PB)", [equals your bonus])
+
+  #stat.stroke()
+
+  === Flyby (Air only)
+  The beast doesn't provoke opportunity attacks when it flies out of an enemy's reach. 
+
+  === Pack Tactics (Land and Water Only)
+  The beast has advantage on an attack roll against a creature if at least one of the beast's allies is within 5 feet of the creature and the ally isn't incapacitated.
+
+  === Water Breathing (Water Only)
+  The beast can breath only underwater.
+  == Actions 
+  === Multiattack
+  The beast makes a number of attacks equal to half this spell's level (rounded down).
+
+  === Maul 
+  _Melee weapon attack:_ your spell attack modifier to hit, reach 5ft., one target. _Hit:_ 1d8 + 4 + the spell's level piercing damage..
+
+]
+
 // == Special Sections
 
 
