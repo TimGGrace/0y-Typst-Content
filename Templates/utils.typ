@@ -164,8 +164,8 @@ return cetz.canvas({
 
         let m = dydx(x-val, y-val)
         let norm-m = calc.sqrt(m*m + 1)
-        let dy = stroke-width * m / norm-m
-        let dx = stroke-width * 1 / norm-m
+        let dy = step*stroke-width * m / norm-m
+        let dx = step*stroke-width * 1 / norm-m
         plot.add(((x-val - dx,y-val - dy),(x-val + dx,y-val + dy)),
         style:sty)
 

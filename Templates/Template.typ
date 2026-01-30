@@ -3,7 +3,7 @@
 #import "@preview/codly-languages:0.1.1": *
 #import "@preview/pinit:0.2.2": *
 #import "@preview/cetz:0.4.2": canvas, draw, tree
-#import "@preview/pinit:0.2.2": *
+
 
 #let get-aspect-ratio = () => {
   if "aspect-ratio" not in sys.inputs {
