@@ -5,22 +5,32 @@
     level: "A-level",
     subject: "Computer Science",
     paper: "May Assessment Section D",
-    materials: ("a calculator.",),
+    materials: (
+      "a computer",
+      "a printer",
+      "appropriate software",
+      "the Electronic Answer Document",
+      "an electronic version and a hard copy of the Skeleton Program",
+      "an electronic version and a hard copy of the Preliminary Material.",
+      "You must *not* use a calculator."
+    ),
     instructions: (
-      "Use black ink or black ball-point pen.",
-      "Fill in the boxes at the top of this page.",
+      "Type the information required on the front of your Electronic Answer Document.",
+      "Before the start of the examination make sure your *Centre Number*, *Candidate Name* and *Candidate Number* are shown clearly *in the footer* of every page (also at the top of the front cover) of your Electronic Answer Document",
+      "Enter your answers into the Electronic Answer Document.",
       "Answer *all* questions.",
-      "You must answer the questions in the spaces provided. Do not write outside the box around each page or on blank pages.",
-      "If you need extra space for your answer(s), use the lined pages at the end of this book. Write the question number against your answer(s).",
-      "Do all rough work in this book. Cross through any work you do not want to be marked."
+      "Save your work at regular intervals.",
     ),
     date: "Summer 2026",
     time: "",
-    time-allowed: "1 hour",
+    time-allowed: "1 hour 10 minutes",
     advice: (
-      "In some questions you are required to indicate your answer by completely shading a lozenge alongside the appropriate answer.",
-      "If you want to change your answer you must cross out your original answer.",
-      "If you wish to return to an answer previously crossed out, ring the answer you now wish to select."
+      "You are advised to allocate time to each section as follows:\
+      *Section A* - 40 minutes; *Section B* - 20 minutes; *Section C* - 20 minutes; *Section D* - 70 minutes; ",
+      "*At the end of the examination* \ 
+      Tie together all your printed Electronic Answer Document pages and hand them to the Invigilator.",
+      "*Warning*\
+      It may not be possible to issue a result for this paper if your details are not on every page of your Electronic Answer Document."
     ),
     series-code: "2526",
     specification-code: "7517",
@@ -96,7 +106,7 @@
       Create a new subroutine in the `Simulation` class called `Diapause` which uses `GoHome` to send every ant in the simulation to its nest.
 
       *Task 3* \
-      Modify the `DisplayMenu` method to show a new menu option - "6: Diapause". \
+      Modify the `DisplayMenu` method to show a new menu option - `"6: Diapause"`. \
       Also modify the subroutine `Main` so that when the user enters 6, the Diapause occurs.
 
       *Task 4* \
@@ -166,6 +176,7 @@
 
       *Task 3* \
       Modify the `AdvanceStage` method within the `Simulation` class to allow the Seeker Ant to work as intended. If the ant being moved is a *Seeker* ant that is *not* carrying food, it should call the new `SeekFood` method. Otherwise, it should call the `ChooseCellToMoveTo` method.
+
       *Task 4* \
       Test that the changes you made work:
       - run the Skeleton Program
@@ -254,6 +265,6 @@
         marks: 1
       )
     ])
-
 #aqa.end-of-questions
+#aqa.blank-page(message: [` `])
 #aqa.blank-page(message: [` `])

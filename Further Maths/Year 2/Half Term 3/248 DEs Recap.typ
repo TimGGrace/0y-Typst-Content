@@ -100,7 +100,7 @@ $]
 
 == Separation of Variables - Recap
 #red-book
-Find the general solut1ion to $ #dydx = (2x)/y $
+Find the general solution to $ #dydx = (2x)/y $
 #only("2-3")[
   #text(red)[$
     y#dydx &= 2x =>    &&integral y "d"y = integral 2x "d"x \
@@ -167,9 +167,9 @@ Find the solution to each differential equation, given the initial conditions.
   $dydx = (1 + y^2)/2, x=1, y=0$
   #text(red)[
     $
-      integral 1/(1+y^2)"d"y &= integral 1/2 "d"x => tan y = 1/2 x + c \
+      integral 1/(1+y^2)"d"y &= integral 1/2 "d"x => arctan y = 1/2 x + c \
       "@"(1,0) &= 0 = 1/2 + c => c = -1/2 \
-      therefore tan y &= 1/2 x - 1/2 "or" y = arctan lr((1/2 x - 1/2))
+      therefore arctan y &= 1/2 x - 1/2 "or" y = tan lr((1/2 x - 1/2))
     $
   ]
 ]
@@ -197,7 +197,7 @@ Find $"d"/("d"x)(x y)$ #only("2-4")[#text(red)[$= x #dydx + y$]]
   So if we had: $ x#dydx+y = x^2 $
   We could integrate both sides, and get:
   #place(dy:10pt,dx:3em)[$
-    integral x#dydx+y"d"x = integral x^2 => x y = 1/3 x^3 + c => y = 1/3 x^3 + c/x
+    integral x#dydx+y"d"x = integral x^2 => x y = 1/3 x^3 + c => y = 1/3 x^2 + c/x
   $]
 ]
 #only(5)[
@@ -212,7 +212,7 @@ Find $"d"/("d"x)(x y)$ #only("2-4")[#text(red)[$= x #dydx + y$]]
 Find $"d"/("d"x)(y sin x)$#only("2-3")[#text(red)[$= y cos x + sin x #dydx$]]
 #only(3)[
   $
-    therefore integral #dydx sin x + y cos y "d"x = y sin x + c
+    therefore integral #dydx sin x + y cos x "d"x = y sin x + c
   $
 
   Which is effectively reversing the product rule!
@@ -246,14 +246,22 @@ Find the general solutions by reversing the product rule:
 
 3. $cosh(x)#dydx + sinh(x)y = 2$
 
-4. $ln(x)e^y + e^y / x = x$
+4. $ln(x)e^y#dydx + e^y / x = x$
 
 5. $x^3 y^2 #dydx + x^2 y^3 = 2$
 
 6. $x^2 #dydx + 4x y = 3$
 
 == Alternative Method
-Use the substitution $x = y^2$ to find the general solution to 
+Use the substitution $z = y^2$ to find the general solution to 
 $
   2x y #dydx + y^2 = 2x + 1
 $
+#only(2)[
+  #place(dy:1em,dx:8em)[#text(red)[$
+    z = y^2 &=> ("d"z)/("d"x) = 2y#dydx \
+    therefore x ("d"z)/("d"x)+z &= 2x + 1 \
+    x z &= x^2 + x + c \
+    z &= x + 1 + c/x = y^2
+  $]]
+]

@@ -83,7 +83,7 @@
 ) => {
   exam-config.update(default-exam-config + config)
 
-  set text(font: "Arial", size: 11pt)
+  set text(font: "Aptos", size: 11pt)
   show raw: set text(font: "Consolas",size:11pt)
   show figure: set figure.caption(position: top)
   set figure(numbering: none)
@@ -148,13 +148,10 @@
 }
 
 #let front-cover() = page(background: none, margin: (x: 14mm, bottom: 5mm, top: 17mm))[
-  #context page-number.update(page-number.get() + 1)
-  #grid(
-    columns: (1fr),
-    rows: (
+  #let row-set = (
       15mm,
       6mm,
-      60mm,
+      0mm, //No student details
       6mm,
       auto,
       6mm,
@@ -169,11 +166,18 @@
       1fr,
       0.5pt,
       17mm, // footer
-    ),
+    )
+  #context if not exam-config.get().hide-borders {
+        row-set.at(2) = 60mm
+      } 
+  #context page-number.update(page-number.get() + 1)
+  #grid(
+    columns: (1fr),
+    rows: row-set,
     row-gutter: 0mm,
     image("bpc-logo.png", height: 100%),
     [], // Gap,
-    rect(
+    [#context if not exam-config.get().hide-borders {rect(
       width: 100%,
       height: 100%,
       stroke: black + 0.5pt,
@@ -205,7 +209,7 @@
         align(bottom)[Candidate signature], [], align(bottom, line(stroke: 0.5pt, length: 100%))
       )
       #place(dx: 38mm, dy: 1.5mm)[I declare this is my own work.]
-    ],
+    ]}],
     [],
     text(font: "Chevin Pro", weight: "medium", size: 28pt, [#context exam-config.get().level]),
     [],
@@ -254,7 +258,7 @@
         ]]
       ],
       [],
-      text(size: 9pt, context table(
+      context if not exam-config.get().hide-borders {text(size: 9pt, context table(
         stroke: 0.5pt,
         rows: (8mm, 6mm, ..range(questions-counter.final().at(0)).map(_ => 6mm)),
         columns: (1fr, 1fr),
@@ -264,7 +268,7 @@
         ..question-numbers.final().map(x => calc.floor(x)).dedup().map(i => (align(center + horizon)[#(i)], table.cell(fill: rgb("#dedede"), []))).flatten(),
         table.cell(fill: rgb("#dedede"), stroke: 1pt)[#align(center, [*TOTAL*])],
         table.cell(fill: rgb("#dedede"), stroke: 1pt)[], 
-      ))
+      ))}
     ),
     line(length: 100%, stroke: 0.5pt),
     context grid(
