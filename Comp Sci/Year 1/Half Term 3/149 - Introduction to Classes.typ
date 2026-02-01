@@ -76,7 +76,47 @@ Like a Pirate chest!
 1. You want to be able to put things *in* the chest.
 2. You want to be able to *lock* the chest, sometimes.
 
+== But whyyyyyyy?
+Imagine that you're making a game, and you need enemies to move around.#pause
 
+Parallel arrays let you track all of their attributes, and you have functions to take care of their behaviours.#pause
+
+A new attribute needs to be added to the game, so you implement a `struct` rather than a new array, as you've got a few now...#pause
+
+You've got several functions that use `switch` on a property of that enemy, but when you want to add a new type, you have to edit every one of those functions!#pause
+#place(dy:-15em)[
+  #rect(fill:fadedYellow, stroke:2pt,radius:15pt)[Option 1:
+  ```cs static Enemy[] allEnemies;
+
+  static void enemyAction(Enemy e){
+    switch(e.type){
+      ...
+    
+  static void removeEnemy(Enemy e){
+    switch(e.health){
+      ...
+
+  static void ...
+  ```
+  ]
+]#pause
+#place(dy:-15em,dx:15em)[
+  #rect(fill:fadedBlue.lighten(70%), stroke:2pt,radius:15pt)[Option 2:
+  ```cs static Enemy[] allEnemies;
+
+  class Enemy {
+
+    void Act() {
+      ...
+    }
+    void Damage() {
+      ...
+    }
+    void Move() {
+      ...
+  ```
+  ]
+]
 == Objects vs Classes
 #notes
 A *class* is the blueprint for the object. It's a template.
@@ -92,5 +132,75 @@ We are going outside of the class `Program`]
 
 
 == Classes in C\#
+#notes
+These will look like structures, so I'll put them both here for \ comparison. (Remember, comparison is a useful memory tool!)
+#text(18pt)[#grid(columns:(1fr,1fr))[
+```cs public struct User {
+  public string userName;
+  public string passHash;
+  public bool isAdmin; }
+  
+  class Program {
+    static void logInUser(User u) {
+      ... }
+    static void showPage(User u) {
+      ...
+  }
+  ```
+][
+#uncover(2)[
+```cs public class User {
+  public string userName, passHash;
+  public bool isAdmin;
 
-asf
+  public User(string inName, string pass){
+    ...
+  }
+  bool validateLogin(string inPass) {
+    ... }
+  static void displayPage() {
+    ... }
+}
+```
+]
+]]
+== Instantiation
+#notes
+Once we've created a class, we need to be able to create an instance of it within our program! #pause
+```cs static void Main(string[] args) {
+  User mainAccount = new User();
+
+  Console.WriteLine("Please log in:");
+  mainAccount.validateLogin(Console.ReadLine());  
+}```#pause
+#place(dy:20pt)[The term `new User();` calls the *constructor* of the class. If one hasn't been programmed, C\#'s compiler will use the *default constructor*. If one has been programmed, the default constructor does not get created.]
+
+== Practice Time!
+#Comp
+On BPCompSci.com: *W125 - C\# Using classes and objects*
+
+#text(18pt)[```cs public class Account
+{
+    public int balance;
+    public int overdraftLimit;
+    public void makeDeposit(int amount)
+    {
+        balance += amount;
+    }
+    public void MakeWithdrawal(int amount)
+    {
+        balance -= amount;
+    }
+}
+
+```
+#place(dy:-12em,dx:23em)[
+  ```cs static void Main(string[] args)
+{
+    Account myAccount = new Account();
+    myAccount.MakeWithdrawal(1337);
+}
+```
+]
+]#pause
+#place(dx:12em)[#text(purple)[#bold[EXT:] W126 - C\# Creating custom classes]]

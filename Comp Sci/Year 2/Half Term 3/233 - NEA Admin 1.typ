@@ -3,7 +3,7 @@
                           config-colors(primary:fadedBlue))
 #show: set page(fill: fadedYellow)
 
-#weeklyReview(title:[R214 - IP Addresses, Subnet Mask, \ Boolean Algebra])
+#weeklyReview(title:[R215 - IP Addresses, Subnet Mask, \ Boolean Algebra])
 
 == NEA Paperwork
 #Comp

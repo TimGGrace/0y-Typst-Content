@@ -63,7 +63,7 @@ Let's start with making a thing that appears on the screen.
 == Adding to it
 One option to add to this is to make more features within Entity.
 
-But if you want multiple *types* of entity, we can use *Inheritance*. (A band skill, nice!) \
+But if you want multiple *types* of entity, we can use *Inheritance*. \ (A band skill, nice!) \
 EG:
 
 ```cs public class Player : Entity {
