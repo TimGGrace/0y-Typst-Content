@@ -84,7 +84,7 @@
   exam-config.update(default-exam-config + config)
 
   set text(font: "Aptos", size: 11pt)
-  show raw: set text(font: "Consolas",size:11pt)
+  show raw: set text(font: "Courier New",size:12pt)
   show figure: set figure.caption(position: top)
   set figure(numbering: none)
   show figure.caption: set text(weight: "bold")

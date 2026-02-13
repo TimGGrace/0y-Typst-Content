@@ -4,12 +4,14 @@
   #cs-ms-table(
     questions:(
       (
-        number: 6.000001,
+        number: 6,
         marks: 3,
         solution: [
-          The nest calculates the food consumption; if the food level drops to 0 (and there are still ants), ants are marked for culling; \ \
-          If the current food level is less than the number of ants in the nest, ants are marked for culling; \ \
-          If the current food level is less than 5 times the number of ants (indicating a severe shortage), additional ants are marked for culling;
+          If the food level drops to 0 (and there are still ants);
+
+          If the current food level is less than the number of ants in the nest;
+
+          If the current food level is less than 5 times the number of ants (indicating a severe shortage);
         ]
       ),
     )
@@ -29,11 +31,13 @@
         number: 7.2,
         marks: 2,
         solution: [
-          *1 Mark:* \
-          It is possible a the first nest position would be not on the grid; \ \
+          *Max 1:* \
+          It is possible a the first nest position would be not on the grid; \
+          Accessing an index outside of the valid range would cause a runetime error;
+
           *Max 1:* \
           The program could be modified to only accept dimensions such that `(2, 4)` is on the grid; \
-          The first position of the nest could be made random within the given dimensions;
+          The first position of the nest could be made within the given dimensions;
         ]
       )
     )
@@ -58,7 +62,7 @@
         number: 8.3,
         marks: 1,
         solution: [
-          Entity
+          Entity;
         ]
       ),
       (
@@ -98,7 +102,9 @@
         number: 10.000001,
         marks: 1,
         solution: [
-          `CurrentCell` \// `Details` \// `N`;\ \
+          `AntsToCull` / `Count` / `AntsInNestCount` / `RPos` / `RNo1` / `RNo2`;
+
+          *A.* `A`;
           *R.* if spelled incorrectly. \
           *R.* if any additional code \
           *I.* case

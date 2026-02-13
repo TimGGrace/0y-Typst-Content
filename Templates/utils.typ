@@ -86,6 +86,7 @@
 #let TLFMaths = place(top + right, dy: -1em, image(width:35%, "TLMathsFMBook.png"))
 #let GClass = place(top + right, dy:-1.5em,dx:1em,image(width:20%,"GClassLogo.svg"))
 #let Comp = place(top + right, dy:-1em,image(width:15%,"computer.svg"))
+#let discuss = place(top + right, dy: -1em, image(width: 13%, "discuss.svg"))
 
 #let practiceSlide(title: "Practice", size: 38pt, body) = [
   == #title

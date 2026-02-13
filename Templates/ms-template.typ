@@ -34,6 +34,7 @@
 
 #let mark-scheme(config: default-exam-config, body) = {
   set text(font: "Aptos", size: 11pt)
+  show raw: set text(font: "Courier New",size:12pt)
   set page(margin: (x: 17mm))
   show math.equation: set text(size: 13pt)
   set par(leading: 2.2mm)
