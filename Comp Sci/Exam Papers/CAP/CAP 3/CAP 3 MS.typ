@@ -285,7 +285,7 @@
         - (Some) light is reflected back from disk
         - reflected light falls on (light) sensor/photodiode
         - Disk spins at constant #underline[linear] velocity /\/ zoned constant #underline[linear] velocity /\/ variable (angular) velocity \ *A*. variable speed \ *R*. constant speed
-        - Head move sin/out to get to particular point on track
+        - Head moves in/out to get to particular point on track
         #v(13cm)
       ]
     ),
