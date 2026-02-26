@@ -80,7 +80,7 @@ Console.WriteLine(myInt + stack.Peek());
 ([`stack.Push(3);
 stack.Push(1);
 stack.Push(4);
-stack.Push(stack.Pop() * stack.Pop();
+stack.Push(stack.Pop() * stack.Pop());
 
 stack.Push(5);
 
