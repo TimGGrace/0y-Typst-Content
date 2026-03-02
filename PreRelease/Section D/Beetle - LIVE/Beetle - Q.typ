@@ -1,100 +1,91 @@
-#import "../../../Templates/ms-template.typ": *
+#import "../../../Templates/lib.typ": *
 
-#mark-scheme[
-#cs-ms-table(
-    questions:(
-      (
-        number: 14.1,
-        marks: 11,
-        solution: [
-          *All marks for AO3 (programming)* \ \
-          Mark points 1 to 7 relate to the `Beetle` class. \ \
-          1. Creating a new class called `Beetle` that inherits from `Entity`; \
-            *R.* other names for class *I.* case and minor typos
-          2. Constructor that calls parent class constructor and sets Row and \ Column to 3. *A.* Row and Column set after the call to the parent class constructor.
-          3. Subroutine called `AdvanceStage` that overrides parent class method.
-          4. Random valid position is generated; *R.* Beetle is capable of not moving.
-          5. Iterative structure that checks each Ant.
-          6. All Ants in the same position added to a list for removal.
-          7. Removal occurs *after* the iterative structure. *A.* equivalent (eg manipulation of iterator variable)
-          \ Mark points 8 to 11 relate to the modified methods within the `Simulation` class.
-          8. `GetAreaDetails`, `GetDetails` and `GetCellDetails` contain selection structure comparing a Cell's location to the beetle's location.
-          9. All selection structures correctly display `Beetle` when necessary. \ *R.* alternative strings. *I.* case and minor typos
-          10. Call to Beetle's `AdvanceStage` made within the primary iteration structure. *R.* Beetle's `AdvanceStage` will be called multiple times per stage.
-          11. Call to Beetle's `AdvanceStage` made after all Ants have moved.
-        ]),
-        (number: 14.2,
-        marks: 1,
-        solution: [*Mark is for AO3 (evaluate)* \
-          *\*\*\*\* SCREEN CAPTURE \*\*\*\** \
-          _Must match code from *14.1*, including prompts on screen capture matching those in code. \ Code for *14.1* must be sensible._ 
-          
-          Screen capture(s) showing that the beetle displays correctly and the simulation is uninterrupted. 
-          
-          *R.* Beetle is seen in a cell with an ant.
-          #v(13cm)
-          *Expected Solution*: \
-          `Beetle Class`
-          #text(10pt)[```cs 
-class Beetle : Entity
-{
-    public Beetle() : base(3, 3)
-    {
-    }
-
-    public override void AdvanceStage(List<Nest> Nests, List<Ant> Ants, List<Pheromone> Pheromones)
-    {
-        int newCol = -1; int newRow = -1;
-        do
-        {
-            newCol = Column + RGen.Next(3) - 1;
-            newRow = Row + RGen.Next(3) - 1;
-        } while (newCol == Column && newRow == Row);
-        Row = newRow;
-        Column = newCol;
-
-        List<Ant> AntsToCull = new List<Ant>();
-        foreach (Ant a in Ants)
-        {
-            if (InSameLocation(a))
-            {
-                AntsToCull.Add(a);
-            }
-        }
-        foreach (Ant a in AntsToCull) Ants.Remove(a);
-    }
-}```]
-
-          `Modifications to GetAreaDetails and GetDetails`
-          #text(10pt)[```cs
-if (AmountOfFood > 0) {
-    Details += $"| {AmountOfFood} food |  ";
-}
-if (TempCell.InSameLocation(beetle)) {
-    Details += "| Beetle |";
-}
-          ```]
-
-          `Modifications to GetCellDetails`
-          #text(10pt)[```cs
-if (CurrentCell.InSameLocation(beetle)) {
-    Details += "| Beetle |";
-}
-          ```]
-
-          `Modifications to AdvanceStage`
-          #text(10pt)[```cs
-public void AdvanceStage(int NumberOfStages)
-{
-    ...
-        foreach (Nest N in Nests) {
-            N.AdvanceStage(Nests, Ants, Pheromones);
-        }
-        beetle.AdvanceStage(Nests, Ants, Pheromones);
-    }
-}```]
-        ]
-      ),
-    )
+#show: aqa.setup-page.with(
+  config: (
+    level: "A-level",
+    subject: "Computer Science",
+    paper: "Pre Release Section D",
+    materials: ( "a computer",),
+    instructions: (""),
+    date: "Summer 2026",
+    time: "",
+    time-allowed: "NA",
+    advice: (""),
+    series-code: "2526",
+    specification-code: "7517",
+    paper-code: "Pre Release Questions",
+    numbering-style: "compsci",
+    hide-borders: true,
+    
   )
-]
+)
+
+#aqa.question(
+    question-number: 14,
+    marks: none,
+    question: [
+        This question extends the Skeleton Program by adding a predator, a beetle, to the simulation.
+
+        Every stage, *after* the ants have acted, the beetle will move *at random* to a new cell in its immediate vicinity.
+
+        The valid cells in *Figure 1* are marked with `X`, where `B` represents the beetle.
+
+        #aqa.center(align(center, figure(
+      caption: [Figure 1],
+      table(columns:5,
+      [` `],[` `],[` `],[` `],[` `],
+      [` `],[`X`],[`X`],[`X`],[` `],
+      [` `],[`X`],[`B`],[`X`],[` `],
+      [` `],[`X`],[`X`],[`X`],[` `],
+      [` `],[` `],[` `],[` `],[` `])
+    )))
+        *After* it has moved, the Beetle will devour (remove from the simulation) *all* Ants within the same location.
+
+        When the simulation begins, the Beetle will begin in the cell `(3, 3)`. The Beetle is capable of moving beyond the grid points.
+
+        *What you need to do*
+
+        *Task 1* \
+        Create a new class called `Beetle` that is a subclass of `Entity`.
+
+        Create two new methods within the `Beetle` class to enable it to function as described above: a constructor and `AdvanceStage`.
+
+        The method `AdvanceStage` should override the method within the `Entity` class.
+
+        *Task 2* \
+        Modify the methods `GetDetails`, `GetAreaDetails` and `GetCellDetails` within the `Simulation` class so that the beetle id siapleyed as '`Beetle`' whenever viewed within a cell.
+
+        *Task 3* \
+        Modify the constructor and `AdvanceStage` methods within the `Simulation` class to allow the `Beetle` to function as described.
+
+        The constructor of the `Simulation` class should create a `Beetle` at the coordinate `(3, 3)`. The `AdvanceStage` method should cause the `Beetle` to act *after* the ants have acted.
+        #v(3cm)
+        *Task 4* \
+        Test that the changes you have made work:
+        - run the Skeleton Program
+        - enter `1`
+        - enter `3`
+        - enter `2`, then `4`
+        - enter `5`, then `2`
+        - enter `1`
+    ]
+)
+#rect( width: 105%,
+    [
+      *Evidence that you need to provide* \
+      Include the following evidence in your Electronic Answer Document.
+      #aqa.question(
+        question-number: 14.1,
+        marks: 11,
+        question: [
+          Your PROGRAM SOURCE CODE for the new class `Beetle` as well as any amended methods within the `Simulation` class.
+        ]
+      )
+      #aqa.question(
+        question-number: 14.2,
+        marks: 1,
+        question: [
+          SCREEN CAPTURE(S) showing the results of the requested test.
+        ]
+      )
+    ])

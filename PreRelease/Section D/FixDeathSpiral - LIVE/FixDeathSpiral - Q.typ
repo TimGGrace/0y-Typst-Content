@@ -1,27 +1,26 @@
-#import "../../../Templates/exam-template.typ" : *
-#show raw: set text(font: "Consolas",size:12pt)
-#exam(
+#import "../../../Templates/lib.typ": *
+
+#show: aqa.setup-page.with(
   config: (
     level: "A-level",
     subject: "Computer Science",
-    paper: "Potential Section D Questions",
-    materials: ("A copy of the Skeleton Program","A copy of the Preliminary Material"),
-    instructions: (
-      "Answer *all* questions.",
-      "Show all rough work for this paper."
-    ),
-    date: "January 2026",
+    paper: "Pre Release Section D",
+    materials: ( "a computer",),
+    instructions: (""),
+    date: "Summer 2026",
     time: "",
-    time-allowed: "20 minutes",
-    advice: ("",),
-    series-code: "7517",
-    specification-code: "1",
-    paper-code: "Section D",
-    numbering-style: "compsci"
+    time-allowed: "NA",
+    advice: (""),
+    series-code: "2526",
+    specification-code: "7517",
+    paper-code: "Pre Release Questions",
+    numbering-style: "compsci",
+    hide-borders: true,
+    
   )
-)[
-#question-page[
-  #question(
+)
+
+#aqa.question(
     question-number: 13,
     question: [
       This question extends the Skeleton Program by preventing unintended ant behaviour.
@@ -66,28 +65,24 @@
     ],
     marks: none
   )
-]
-#question-page[
-  \
+
       
-  #rect( width: 105%,
-    [
-      *Evidence that you need to provide* \
-      Include the following evidence in your Electronic Answer Document.
-      #question(
-        question-number: 13.1,
-        question: [
-          Your PROGRAM SOURCE CODE for any amended methods within the `Ant` class and any amended methods within the `Simulation` class.
-        ], 
-        marks: 11
-      )
-      #question(
-        question-number: 13.2,
-        question: [
-          SCREEN CAPTURE(S) showing the results of the requested test.
-        ],
-        marks: 1
-      )
-    ])
-]
-]
+#rect( width: 105%,
+  [
+    *Evidence that you need to provide* \
+    Include the following evidence in your Electronic Answer Document.
+    #aqa.question(
+      question-number: 13.1,
+      question: [
+        Your PROGRAM SOURCE CODE for any amended methods within the `Ant` class and any amended methods within the `Simulation` class.
+      ], 
+      marks: 11
+    )
+    #aqa.question(
+      question-number: 13.2,
+      question: [
+        SCREEN CAPTURE(S) showing the results of the requested test.
+      ],
+      marks: 1
+    )
+  ])
