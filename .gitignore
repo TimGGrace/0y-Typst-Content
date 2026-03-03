@@ -1,1 +1,5 @@
+# Font files
 /fonts
+
+# File types to ignore
+*.pdf
