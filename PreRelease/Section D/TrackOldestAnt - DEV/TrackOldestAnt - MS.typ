@@ -15,7 +15,7 @@
           
           Marks 4 to 7 discuss changes to the `AdvanceStage` method within the `Simulation` class.
           4. AdvanceStage increments the stage counter at the beginning of a stage;
-          5. Age of oldest ant is found and variable updated appropriately; *A.* performed within the `Ant` iterative structure.
+          5. Age of oldest ant is found and variable updated appropriately; *A.* performed within the `Ant` iterative structure. *A.* performed after the `Nest` iterative structure.
           6. Selection statement comparing the number of Ants to 0;
           7. If there are no ants, correct message is displayed and no further stages are completed;
 
@@ -36,7 +36,7 @@
           
           Screen capture(s) showing the user attempting to advance `100` stages.
           Simulation states that the simulation has ended early, and states the age of the oldest ant.
-          #image("solution.png", height:6.5cm)
+          #image("solution.png", height:7.5cm)
           #v(13cm)
           *Expected Solution*: \
           *Modifications to Main:*
