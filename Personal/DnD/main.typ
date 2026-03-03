@@ -333,6 +333,66 @@ Without a better clue for now, you set off out of the city. At least both you an
 
 ]
 
+#pagebreak()
+== Nestowe's Scarecrows
+The party reach Nestowe at different times throughout the day, depending on their distance and speed of travel. 
+- Those who arrive earlier in the day may spot that there are more people in the fields than you would expect at this time of year.
+- Those arriving later will see people making scarecrows at the corners of many fields.
+- If anyone asks the locals, it's because something is stealing the scarecrows in the night. Most nights at least one goes missing.
+
+The party get a place to rest at the town's inn, *The Gentle Bull*. It's proprietor, Harry, will charge 8s for room & board, or 15s for a twin room.
+
+#fancy-comment-box[#begin-item[
+  = Nestowe
+  === Tavern
+  The Gentle Bubble (Harry) 
+
+  === Industry
+  Sparkling wines, Hardy foods otherwise.
+  = 
+  Most of the town are actively engaged in the fields, several people are making scarecrows at the town center.
+
+  The town doesn't have its own guards, instead relying on Highgate (only a \~1 day journey)
+
+  === Recently
+  The residents have reported that their scarecrows are going missing in the night, the guards in Highgate seem disinterested.
+
+]]
+=== Investigation
+The players can:
+- Find tracks in the field.
+- Talk to field workers.
+- Watch throught the night.
+Any of these could lead them back to the goblin's cave.
+
+If they're fast, they may even catch a pair carrying a scarecrow like a comic spit roast.
+
+#v(13cm)
+=== The Cave
+
+There are several goblins in and around the cave:
+- Two on a mission to steal a scarecrow (or sleeping in the day)
+- Three out side on watch for intruders
+- Five in the main chamber (asleep in the night)
+
+Should the party fight the three guard-goblins without attempting to lure them further away from the cave, the commotion may wake the sleeping goblins in the cave.
+
+The cave is formed by two large rooms off of a single tunnel. Shortly after the entrance is the main habitation chamber. Sleeping pits and a fire with a cauldron can be found in here, as well as the two mission-goblins if they are out.
+
+Further down the tunnel, it opens out directly into a large chamber reserved for fighting training! The goblins have been stealing the scarecrows to practice their wrestling moves.
+
+*Kraark* has been training his goblins to fight well and dirty. They will bite, trip, grapple and elbow drop wherever possible. They can and will team up against an opponent if it is to their advantage, but the won't help each other if caught.
+
+Kraark is wearing magical bandages on his hands, as described below. Players can take those from him if he is incapacitated.
+
+#fancy-comment-box[#begin-item[
+  ==== Handwraps of Kraark
+  _Wondrous item, rare (requires attunement)_
+  
+  These wraps seem permenantly stained with sweat and blood, no matter how often they're washed. When wrapped around your hands, you feel the urge to hit something.
+
+  While wearing these wraps around your hands, your unarmed strikes become magical. In addition, you may choose to use either Strength or Dexterity when determining hit and damage modifiers. Your unarmed strikes use #stat.dice("1d6") + Strength/Dexterity modifier for the damage.
+]]
 // == Special Sections
 
 
