@@ -142,7 +142,7 @@
                 .map(_ => []), ..val)
 }
 
-#let draw-vector-field(dydx:(x,y)=>x + y, domain:(-3,3),range:(-3,3),step:1,stroke-width:0.8, size:(8,8)) = {
+#let draw-vector-field(dydx:(x,y)=>x + y, domain:(-3,3),range:(-3,3),step:1,stroke-width:0.8, size:(8,8), axisLabels: ($x$,$y$)) = {
 
 return cetz.canvas({
   import cetz.draw: *
@@ -150,7 +150,7 @@ return cetz.canvas({
   set-style(stroke:2pt)
   plot.plot(size:size,
   x-tick-step: none,y-tick-step: none, 
-  x-label:[$x$],y-label:[$y$],
+  x-label:[#axisLabels.at(0)],y-label:[#axisLabels.at(1)],
   axis-style: "school-book",
   x-min:domain.at(0),x-max:domain.at(1),
   y-min:range.at(0),y-max:range.at(1),
