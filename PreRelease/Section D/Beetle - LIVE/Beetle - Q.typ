@@ -53,7 +53,7 @@
         The method `AdvanceStage` should override the method within the `Entity` class.
 
         *Task 2* \
-        Modify the methods `GetDetails`, `GetAreaDetails` and `GetCellDetails` within the `Simulation` class so that the beetle id siapleyed as '`Beetle`' whenever viewed within a cell.
+        Modify the methods `GetDetails`, `GetAreaDetails` and `GetCellDetails` within the `Simulation` class so that the beetle is displayed as '`Beetle`' whenever viewed within a cell.
 
         *Task 3* \
         Modify the constructor and `AdvanceStage` methods within the `Simulation` class to allow the `Beetle` to function as described.
