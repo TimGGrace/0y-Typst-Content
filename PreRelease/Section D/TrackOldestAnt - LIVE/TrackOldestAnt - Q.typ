@@ -44,7 +44,7 @@
       Further modify the method so that if no ants remain in a simulation after a stage completes, the message "`Simulation has no ants after stage `" followed by the current stage is printed and no more stages are advanced.
       
       *Task 5* \
-      Modify the subroutine `Main` so that if there are no ants in a simulation, the age of the oldfest ant is displayed and then the simulation is exited.
+      Modify the subroutine `Main` so that if there are no ants in a simulation, the age of the oldest ant is displayed and then the simulation is exited.
       
       *Task 6* \
       Test that the changes you made work:
