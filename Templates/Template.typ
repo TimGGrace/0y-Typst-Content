@@ -285,3 +285,11 @@
     [Update your weekly review tracker with *targets*.]
   )]
 ]
+
+#let KeyPerson(title:"",content:[],image-path:"",link-path:"www.google.com") = [
+  == #link(link-path)[#title]
+
+  #grid(columns:(1.5fr,0.8fr),inset:15pt,
+  text(22pt)[#content],[#image(image-path,width:100%)])
+
+]

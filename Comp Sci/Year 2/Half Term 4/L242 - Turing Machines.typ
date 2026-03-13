@@ -29,7 +29,7 @@
   edge(<B>,<B>,[a],bend:120deg,"-|>",label-sep: -2pt),
   edge(<C>,<A>,[a],bend:30deg,"-|>",label-sep: -2pt),
   edge(<C>,<D>,[b],"-|>", bend:30deg,label-sep: -3pt),
-  edge(<D>,<C>,[a],"-|>", bend:30deg,label-sep: -3pt),
+  edge(<D>,<C>,[d],"-|>", bend:30deg,label-sep: -3pt),
   edge(<B>,<D>,[c],"-|>", bend:30deg,label-sep: -3pt)
   
 )
@@ -75,7 +75,7 @@ We can think of a Turing Machine as a computer with a #bold[single fixed program
 #place(dx:20em,dy:6em,)[#image("img/turing machine.png", height:10em,)]
 To make the machine, we will need:
 - A finite alphabet of symbols (eg `0`, `1`, #emoji.square)#pause
-- A finiteset of states (eg S0, S1, S2...)#pause
+- A finite set of states (eg S0, S1, S2...)#pause
 - One of these must be the start state #pause
 - An infinite tape with discrete squares #pause
 - A read-write head that can move.#pause
@@ -103,7 +103,7 @@ table.cell(stroke:(left:0pt))[],[#emoji.square],[`0`],[`1`],[`0`],[`0`],[`1`],[`
   edge(<S0>,<S0>,bend:120deg,"-|>",[0, 1 | $<-$], label-sep:-3pt),
   edge(<S0>,<S1>,"-|>",bend:30deg,[#emoji.square | $->$]),
   edge(<S1>,<S1>,bend:120deg,"-|>",[0, 1 | #emoji.square $->$], label-sep: -3pt),
-  edge(<S1>,<S2>,bend:30deg,"-|>",[#emoji.square | $->$], label-sep:-3pt,) 
+  edge(<S1>,<S2>,bend:30deg,"-|>",[#emoji.square | $<-$], label-sep:-3pt,) 
 )
 #TM1
 
@@ -153,18 +153,18 @@ Write the state transitions for the following State Transition Diagram:
 
   $delta ("S0",1) = ("S0",1,<-)$ 
 
-  $delta ("S0",#emoji.square) = ("S0",#emoji.square,->)$ 
+  $delta ("S0",#emoji.square) = ("S1",#emoji.square,->)$ 
 
      ],
 [$delta ("S1",0) = ("S1",#emoji.square,->)$ 
 
   $delta ("S1",1) = ("S1",#emoji.square,->)$
   
-  $delta ("S1",#emoji.square) = ("S1",#emoji.square,<-)$])
+  $delta ("S1",#emoji.square) = ("S2",#emoji.square,<-)$])
 
 == But what's so important about them?
 #notes
-Turing Machines provide a *model of computation*, so can help us understand what is, and is not, computable.
+Turing Machines provide a *model of computation*, so can help us understand what is, and is not, *computable*.
 
 Since no physical computer can be more powerful than a Turing Machine, if a Turing Machine cannot solve a yes/no problem, then it is *undecidable*.
 
@@ -179,3 +179,13 @@ The theory of the UTM underpins the *stored program concept* for the #bold[Von N
 The consequence is that programs and data really are the same thing.
 
 #link("https://math.hws.edu/eck/js/turing-machine/TM.html")[#rect(stroke:1pt,radius:15pt,inset:10pt,fill:fadedBlue.lighten(50%),[Click to have a play!])]
+
+== For the rest of the lesson
+#Comp
+1. Complete a Turing Machine exam question \ (use BPCompSci and the exam question spreadsheet) #pause
+
+2. Complete the example questions in the BPCompSci slides for this lesson (L242 Turing Mahcines)#pause
+
+3. Add your Section C Questions to the assignment on Google Classroom#pause
+
+4. Complete CRP's class' Section C Questions on BPCompSci
