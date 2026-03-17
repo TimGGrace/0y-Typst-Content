@@ -179,3 +179,9 @@ return cetz.canvas({
 
   })
 }
+
+#let getTangent(func: x=>calc.sin(x),x-0: 0) = {
+  let m = nm-differentiate-central(f_x:func,h:0.000001, x0: x-0)
+  let y-0 = func(x-0);
+  return x=> m * (x - x-0) + y-0
+}
