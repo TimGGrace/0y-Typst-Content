@@ -4,7 +4,7 @@
 #cs-ms-table(
     questions:(
       (
-        number: 6.0000001,
+        number: 6.000001,
         marks: 3,
         solution: [
           The ant checks if there is a neighbour with a "strongest pheromone" (if the index returned is not -1); \ \
@@ -32,6 +32,35 @@
           Removing an item could cause unintended consequences \// skip Pheromones;
         ]
       )
+    )
+  )
+  #cs-ms-table(
+    questions:(
+      (
+        number: 8.1,
+        marks: 1,
+        solution:[`WorkerAnt` /\/ `QueenAnt`;]
+      ),
+      (
+        number: 8.2,
+        marks: 1,
+        solution:[`Grid` /\/ `Ants` /\/ `Pheromones` /\/ `Nests` /\/ \ `NumberOfRows` /\/ `NumberOfColumns` /\/ `StartingFoodInNest` /\/ \ `StartingNumberOfFoodCells` /\/ `StartingNumberOfNests`;]
+      ),
+      (
+        number: 8.3,
+        marks: 1,
+        solution:[`GetCellDetails`;]
+      ),
+      (
+        number: 8.4,
+        marks: 1,
+        solution:[`(2, 4)`;]
+      ),
+      (
+        number: 8.5,
+        marks: 1,
+        solution:[Joining two (or more) *strings* to form a single (longer) string;]
+      ),
     )
   )
   #cs-ms-table(
