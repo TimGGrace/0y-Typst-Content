@@ -46,7 +46,7 @@
   question-number: 4,
   marks: 2,
   question: [
-    Explain the purpose of the first selection structure within the `ChooseCellToMoveTo` method within the `Ant` class.
+    Explain the purpose of the first selection structure within the `ChooseCellToMoveTo` method within the `WorkerAnt` class.
   ]
 )
 #aqa.question(

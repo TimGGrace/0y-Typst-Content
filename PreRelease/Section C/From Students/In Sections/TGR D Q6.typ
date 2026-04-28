@@ -25,7 +25,7 @@
   question-number: 1,
   marks: 1,
   question:[
-    State the identifier of a user-defined object that stores at least one instance of a user-defiend class.
+    State the identifier of a user-defined object that stores at least one instance of a user-defined class.
   ]
 )
 #aqa.question(

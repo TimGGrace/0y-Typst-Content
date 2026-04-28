@@ -46,7 +46,7 @@
   question-number: 4,
   marks: 2,
   question: [
-    Within the `AdvanceStage` method in the `Nest` class, there is a List called PheronomesToDelete. 
+    Within the `AdvanceStage` method in the `Simulation` class, there is a List called PheromonesToDelete. 
     
     Explain why a list has been used to store objects for later deletion.
   ]

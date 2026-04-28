@@ -20,7 +20,7 @@
   )
 )
 
-== CRP Three
+== IMC One
 #aqa.question(
   question-number: 1,
   marks: 1,

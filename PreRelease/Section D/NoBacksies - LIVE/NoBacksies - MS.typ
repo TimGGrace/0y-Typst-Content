@@ -18,7 +18,7 @@
           5. Iterative structure goes through `ListOfNeighbours`;
           6. Selection statement within the iterative structure to skip/ignore -1;
           7. Valid neighbours are added to a list;
-          8. Selection structure for no valid neighbours correctly exits without the ant moving;
+          8. Selection structure for no valid moves correctly exits without the ant moving;
           9. Iterative structure with random position/index generated within;
           10. Iterative structure continues until valid not-visited neighbour is generated. *A.* random valid neighbour chosen from previously generated list;
           

@@ -1,6 +1,6 @@
 #import "../../../../Templates/ms-template.typ": *
 #mark-scheme[
-  == CRP Two
+  == IMC Two
 #cs-ms-table(
     questions:(
       (

@@ -288,8 +288,19 @@
 
 #let KeyPerson(title:"",content:[],image-path:"",link-path:"www.google.com") = [
   == #link(link-path)[#title]
+  #place(top + left, dx:-2em, dy:2em,box(fill: teal, inset: 15pt, width: 50%))
+  #place(top+left,dy:5em,grid(columns:(1.5fr,0.8fr),inset:15pt,
+          text(22pt)[#content],
+          [#image(image-path,height:90%)]
+        ))
+  
 
-  #grid(columns:(1.5fr,0.8fr),inset:15pt,
-  text(22pt)[#content],[#image(image-path,width:100%)])
+]
 
+#let Worksheet(body,title:"You Try") = [
+  == #title
+  #Comp
+  #text(36pt)[
+    #body
+  ]
 ]

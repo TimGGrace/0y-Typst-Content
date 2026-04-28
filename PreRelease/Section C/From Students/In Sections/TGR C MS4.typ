@@ -16,7 +16,7 @@
         number: 2,
         marks: 1,
         solution: [
-          `-1`;
+          `0`;
         ]
       ),
       (

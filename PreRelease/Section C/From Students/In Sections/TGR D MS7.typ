@@ -15,14 +15,14 @@
         number: 2,
         marks: 1,
         solution: [
-          `10`;
+          `3`;
         ]
       ),
       (
         number: 3,
         marks: 1,
         solution: [
-          `3`;
+          `10`;
         ]
       ),
       (

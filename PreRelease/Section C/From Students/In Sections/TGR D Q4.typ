@@ -53,7 +53,7 @@
   question-number: 5,
   marks: 4,
   question: [
-    Describe the chances you would need to make to the program to allow the user to choose the starting amount of food in each nests after the simulation has been chosen.
+    Describe the changes you would need to make to the program to allow the user to choose the starting amount of food in each nests after the simulation has been chosen.
     
     *You should not make any changes to the Skeleton Program when answering this question.*
   ]
