@@ -28,10 +28,10 @@
 
       When asked to select a simulation, the user should be able to enter `5`. 
       
-      When they do, they will be asked to enter a number between `10` and `200` *inclusive*. This number will be quantity of food placed in cells. 
+      When they do, they will then be asked to enter a number between `1` and `5` *inclusive*. This number is to be the number of cells that contain food.
 
-      The user will then be asked to enter a number between `1` and `5` *inclusive*. This number is to be the number of cells that contain food.
-
+      Then they will be asked to enter a number between `10` and `200` *inclusive*. This number will be quantity of food placed in cells. 
+    
       In all other regards, the Simulation properties should be the same as *`Simulation 1`*
 
       `NOTE`: In the current behaviour of the simulation, food can be placed multiple times within the same cell. This should not be changed when answering this question.
@@ -40,11 +40,11 @@
 
       *Task 1* \
       Modify the `Main` subroutine so that should the user enter `5` when prompted for a simulation number they are presented with the prompt:
-      #align(center)[`Enter the quantity of food per cell, between 10 and 200:`]
+      #align(center)[`Enter the number of food cells, between 1 and 5:`]
       Input should then be taken from the user.
 
       Then the user should be presented with the prompt: 
-      #align(center)[`Enter the number of food cells, between 1 and 5:`]
+      #align(center)[`Enter the quantity of food per cell, between 10 and 200:`]
       Input should then be taken from the user.
 
       *Task 2*\

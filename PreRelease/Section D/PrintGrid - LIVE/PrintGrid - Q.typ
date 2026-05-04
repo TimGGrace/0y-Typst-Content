@@ -72,7 +72,7 @@
       Include the following evidence in your Electronic Answer Document.
       #aqa.question(
         question-number: 12.1,
-        marks: 4,
+        marks: 7,
         question: [
           Your PROGRAM SOURCE CODE for the new `GridDisplay` method as well as any amended methods.
         ]
