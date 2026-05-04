@@ -16,7 +16,7 @@
 ]]
 
 = Graphs
-#note[Keywords: `Vertex; Node; edge; arc; neighbour; degree; weighted graph; directed graph; adjacency matrix; adjacency list;`]
+#note[Keywords: `Vertex; Node; edge; arc; neighbour; degree; weighted graph; directed graph;`]
 
 #KeyPerson(
   title: "Dr Daphne Koller BSc, MSc, PhD", 
@@ -30,23 +30,29 @@
 
 == Sprouts
 #mwb
-#text(22pt)[
-  Starting with a few spots drawn on a sheet of paper, players take turns, where each turn consists of drawing a line between two spots (or from a spot to itself) and adding a new spot somewhere along the line. The players are constrained by the following rules:
-]
-#text(18pt)[
+
+  Starting with a few spots drawn on a page, players will take it in turn adding a line to the game. The last player to take a move wins.
+
+  In a turn:
+
+#text(20pt)[
   #uncover("2-")[
-    - The line may be straight or curved, but must not touch or cross itself or any other line.
-    - The new spot cannot be placed on top of one of the endpoints of the new line. Thus the new spot splits the line into two shorter lines.
+    1. Draw a line from from one spot to another. 
+      - You can join a dot to itself.
   ]
   #uncover("3-")[
-    - No spot may have more than three lines attached to it. For the purposes of this rule, a line from the spot to itself counts as two attached lines and new spots are counted as having two lines already attached to them.
+    2. Draw a new spot somewhere on that new line.
   ]
   #uncover("4-")[
-    - You cannot touch a dot twice with one line then connect it to another.
+    Restrictions:
+    - No spot can have more than 3 connections.
   ]
   #uncover("5-")[
-    - The player who makes the last move wins.
+    - You cannot cross anything when drawing a line.
   ]
+]
+#uncover(6)[
+  #place(dy:-8em,dx:18em,rect(inset:10pt,radius:15pt,fill:orange.lighten(40%),stroke:1pt,align(center)[#text(32pt)[Who is our \ Sprouts Champion?]]))
 ]
 == Definitions
 #notes
@@ -56,7 +62,7 @@
   uncover("2-")[Vertex _or_ Node:],uncover("2-")[An object in a graph],
   uncover("3-")[Edge _or_ Arc:],uncover("3-")[A line representing a connection between two nodes in a graph],
   uncover("4-")[Neighbour:],uncover("4-")[Vertices are considered neigbours if they share an edge],
-  uncover("5-")[Degree:],uncover("5-")[The number of edge connections on a vertex],
+  uncover("5-")[Degree _or_ Order:],uncover("5-")[The number of edge connections on a vertex],
   uncover("6-")[Weighted Graph:],uncover("6-")[A graph in which all edges are given a value, called weight],
   uncover("6-")[Directed Graph:],uncover("6-")[A graph in which all edges are given a direction]
 )
@@ -73,104 +79,8 @@
 [Chemicals],uncover("2-")[Molecules],uncover("3-")[Bonds])
 #uncover(2)[
   #discuss
-  In pairs, decide what the edges could represent in these graphs.
+  On your own, then in pairs, decide what the edges could represent in these graphs.
 ]
-
-== Representing a graph
-#notes
-Programming these visual graphs can be really problematic for a computer. We should be looking at different ways of discussing them.#pause
-
-You need to know about an *Adjacency Matrix* and an *Adjacency List*#pause
-
-For today, we'll look at *Adjacency Lists*.
-
-== undirected Example:
-#notes
-#place(center+horizon)[#diagram(
-  node([A],stroke:1pt,inset:15pt,name:<A>),
-  node((1,0),[B],stroke:1pt,inset:15pt,name:<B>),
-  node((1.8,0.5),[C],stroke:1pt,inset:15pt,name:<C>),
-  node((1,1),[D],stroke:1pt,inset:15pt,name:<D>),
-  node((0,1),[E],stroke:1pt,inset:15pt,name:<E>),
-
-  edge(<A>,<B>,"-"),
-  edge(<A>,<E>,"-"),
-  edge(<A>,<D>,"-"),
-  edge(<B>,<C>,"-"),
-  edge(<C>,<D>,"-"),
-  edge(<E>,<B>,"-")
-)]
-== directed Example:
-#notes
-#place(center+horizon)[#diagram(
-  node([A],stroke:1pt,inset:15pt,name:<A>),
-  node((1,0),[B],stroke:1pt,inset:15pt,name:<B>),
-  node((1.8,0.5),[C],stroke:1pt,inset:15pt,name:<C>),
-  node((1,1),[D],stroke:1pt,inset:15pt,name:<D>),
-  node((0,1),[E],stroke:1pt,inset:15pt,name:<E>),
-
-  edge(<A>,<B>,"-|>"),
-  edge(<A>,<E>,"-|>"),
-  edge(<D>,<A>,"-|>"),
-  edge(<B>,<C>,"-|>"),
-  edge(<D>,<C>,"-|>"),
-  edge(<E>,<B>,"-|>"),
-  edge(<B>,<D>,"-|>",bend:20deg),
-  edge(<D>,<B>,"-|>",bend:20deg),
-)]
-
-== You Try
-#notes
-1. Draw the graph represented by this adjacency list.
-#table(columns:(100pt,150pt),
-[Vertex],[Adjacent],
-[A],[B, C, E],
-[B],[A, D],
-[C],[A, D],
-[D],[D, E, C],
-[E],[A, D])
-#pause
-#place(dy:-6em,dx:16em,)[
-  #diagram(
-    node([A],stroke:1pt,inset:15pt,name:<A>),
-    node((1,-0.7),[B],stroke:1pt,inset:15pt,name:<B>),
-    node((2,0),[C],stroke:1pt,inset:15pt,name:<C>),
-    node((2,1),[D],stroke:1pt,inset:15pt,name:<D>),
-    node((0,1),[E],stroke:1pt,inset:15pt,name:<E>),
-
-    edge(<A>,<B>,"-|>", bend:20deg),
-    edge(<A>,<B>,"-|>", bend:20deg),
-    edge(<A>,<E>,"-|>", bend:20deg),
-    edge(<B>,<A>,"-|>", bend:20deg),
-    edge(<B>,<D>,"-|>", bend:20deg),
-    edge(<C>,<A>,"-|>", bend:20deg),
-    edge(<C>,<D>,"-|>", bend:20deg),
-    edge(<D>,<E>,"-|>", bend:20deg),
-    edge(<D.east>,<D>,bend:120deg,"-|>"),
-    edge(<E>,<A>,"-|>", bend:20deg),
-    edge(<E>,<D>,"-|>", bend:20deg)
-  )
-]
-
-== You Try
-#notes
-Represent the graph as an adjacency list.
-#place(center+horizon)[#diagram(
-  node([1],stroke:1pt,inset:15pt,name:<1>),
-  node((2,0),[2],stroke:1pt,inset:15pt,name:<2>),
-  node((1,0.5),[5],stroke:1pt,inset:15pt,name:<5>),
-  node((2,1),[4],stroke:1pt,inset:15pt,name:<4>),
-  node((0,1),[3],stroke:1pt,inset:15pt,name:<3>),
-
-  edge(<1>,<2>,"-"),
-  edge(<1>,<3>,"-"),
-  edge(<1>,<5>,"-"),
-  edge(<2>,<4>,"-"),
-  edge(<2>,<5>,"-"),
-  edge(<4>,<3>,"-"),
-  edge(<5>,<3>,"-"),
-  edge(<4>,<5>,"-"),
-)]
 
 
 == Recap
@@ -178,6 +88,6 @@ Represent the graph as an adjacency list.
 Today, we've covered:
 - Used `Sprouts` to practice graph terminology#pause
 
-- *Definitions* for `Graph`, `Node`, `Edge`, `Neighbour`, `Degree`, `Cycle`, `Tree`#pause
+- *Definitions* for `Graph`, `Node`, `Edge`, `Neighbour`, `Degree`#pause
 
 - Discussed how graphs can be used to represent a range of real-world scenarios
