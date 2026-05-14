@@ -112,3 +112,17 @@ Given: \ $quad quad &A(1,1,-1), B(3,2,-3), C(0,1,2), D(2,3,-4), \ &E(1,0,-5), F(
 5. Find the Cartesian equation of the line through $B D$
 6. Find the angle between the lines $A E$ and $B D$
 
+
+== Solution
+In general:
+$T_A &= T_(A_"equib") + 7x quad quad T_B &= T_(B_"equib")- 9x$ \ \
+At equilibrium: $T_(A_"equib") - T_(B_"equib") - 0.32g sin 30 = 0$ \ \
+In general:
+#place(dx:1em,)[$
+  "using" F = m a quad quad quad quad quad quad quad\ 
+  T_A - T_B - 0.32g sin 30 &= 0.32 dot.double(x) \
+  (T_(A_"equib") + 7x) - (T_(B_"equib")- 9x) - 0.32g sin 30 &= 0.32 dot.double(x)\
+  therefore cancel(T_(A_"equib") - T_(B_"equib") - 0.32g sin 30) + 7x + 9x &= 0.32 dot.double(x) \
+  therefore 50 x = dot.double(x)
+$
+]
