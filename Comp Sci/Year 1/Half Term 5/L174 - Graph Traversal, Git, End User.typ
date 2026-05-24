@@ -125,3 +125,20 @@ For this section, you should:
 
 #bold[You have the rest of the lesson to work on this section.]\
 If you don't know if someone is willing to be your end user, ask them now by email/text. Then complete the #bold[first] part of the section.
+
+== Bool Test
+#grid(columns:(1fr,1fr),[$
+& B dot (C + overline( C )) dot overline( B + A dot overline( A ) ) \
+=& B dot (C + overline( C )) dot overline( B + 0 ) \
+=& B dot 1 dot overline( B + 0 ) \
+=& B dot 1 dot overline( B ) \
+=& B dot overline( B ) \
+=& 0
+$],[$ 
+& B dot (B + 1) dot (A + A dot 0) \
+=& B dot 1 dot (A + A dot 0) \
+=& B dot 1 dot (A + 0) dot A \
+=& B dot 1 dot A dot A \
+=& B dot 1 dot A \
+=& B dot A
+    $])
