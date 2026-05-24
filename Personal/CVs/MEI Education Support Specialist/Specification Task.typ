@@ -106,6 +106,116 @@ if __name__ == "__main__":
 
 ```
 )
+#pagebreak()
+Given the following program, what possible skills can you find that are part of your specification?
+
+#table(columns:(1.2fr,1fr),stroke:0pt,
+```cs
+static Random rnd = new Random();
+
+public class Predictor
+{
+  private Dictionary<int, List<string>> states;
+  private int reward = 3;
+  private int loss = 1;
+
+  public Predictor(int[] inputList, string[] outputList) {
+    states = new Dictionary<int, List<string>>();
+    foreach (int item in inputList) {
+      states.Add(item, new List<string>());
+      foreach (string output in outputList) {
+        for (int i = 0; i < 5; i++) {
+          states[item].Add(output);
+        }
+      }
+    }
+  }
+
+  public string predict(int inputGiven) {
+    List<string> state = states[inputGiven];
+
+    int index = rng.Next(state.Count);
+
+    return state[index];
+  }
+
+  public void train(int inputGiven, string outputGiven, bool correct) {
+    if (correct) {
+      for (int i = 0; i < reward; i++) {
+        states[inputGiven].Add(outputGiven);
+      }
+    } else {
+      for (int i = 0; i < loss; i++) {
+          if (states[inputGiven].Count(x=>x==outputGiven) > 1) {
+            states[inputGiven].Remove(outputGiven);
+          }
+      }
+    }
+  }
+}
+
+public class Dice
+{
+  private int[] faces;
+
+  public Dice() {
+    if (rng.NextDouble() < 0.5) {
+      faces = new int[] { 1, 1, 2, 2, 3, 4, 5, 6 };
+    } else {
+      faces = new int[] { 1, 2, 3, 4, 5, 5, 6, 6 };
+    }
+  }
+
+  public int roll() {
+    int index = rng.Next(faces.Length);
+
+    return faces[index];
+  }
+}
+```,
+```cs
+static bool trial(Predictor model, Dice d) {
+  int roll1 = d.roll();
+  string guess = model.predict(roll1);
+  int roll2 = d.roll();
+
+  if ((guess=="higher" && roll2 > roll1)
+    || (guess=="lower" && roll2 < roll1)) {
+    model.train(roll1, guess, true);
+    return true;
+  } else {
+    model.train(roll1, guess, false);
+    return false;
+  }
+}
+
+
+static void Main(string[] args) {
+  Dice die = new Dice();
+  Predictor model = new Predictor(
+      new int[] { 1, 2, 3, 4, 5, 6 },
+      new string[] { "higher", "lower" }
+      );
+
+  Console.WriteLine("Training...");
+  for (int i = 0; i < 1000; i++) {
+      trial(model, die);
+  }
+
+  Console.WriteLine("Beginning simulation");
+  int success = 0;
+  for (int i = 0; i < 1000; i++) {
+      if (trial(model, die)) success++;
+  }
+  Console.WriteLine("Completed 1000 training rolls.");
+  Console.WriteLine($"{success} / 1000");
+  Console.WriteLine($"{success / 1000.0}% accurate");
+}
+```
+)
+
+
+
 
 #pagebreak()
 #set page(
