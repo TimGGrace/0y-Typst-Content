@@ -304,3 +304,8 @@
     #body
   ]
 ]
+
+#let Address = place(right+top,dy:-3em,dx:3em,[
+  #datetime.today().display("[weekday repr:short] [day]/[month]/[year repr:last_two]") \ 
+  12 Wren Road \ Eastleigh \ Hampshire \ SO50 9QP
+])
