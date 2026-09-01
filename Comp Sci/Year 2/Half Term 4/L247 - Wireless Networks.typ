@@ -10,7 +10,7 @@
   #place(dy:-5em,)[#image("img/247 meme.png", width:100%)]
 ]
 #only(3)[
-  #place(dy:-8em,dx:3em)[#image("img\247 spec.png", height:110%)]
+  #place(dy:-8em,dx:3em)[#image("img/247 spec.png", height:110%)]
 ]
 
 #KeyPerson(title: "Hedy Lamarr", image-path: "../Comp Sci/Year 2/Half Term 4/img/Hedy Lamar.png", content: [During WWII, this famous actress of the time learned about how the Germans were jamming radio frequency of torpedoes. She came up with a concept that came to be known as "frequency hopping."
@@ -18,7 +18,7 @@
 Today, the frequency-hopping science presented in the patent serves as the basis for modern spread-spectrum communication technology (Bluetooth, Wi-Fi, etc.)
 ])
 
-== Least secury coutnries (in terms of public WiFi)
+== Least secure countries (in terms of public WiFi)
 Who do you think is in the top country for percentage of WiFi networks that are unsecured?
 #only("2-")[
   1. Korea (47.9%)

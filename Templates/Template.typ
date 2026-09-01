@@ -309,3 +309,38 @@
   #datetime.today().display("[weekday repr:short] [day]/[month]/[year repr:last_two]") \ 
   12 Wren Road \ Eastleigh \ Hampshire \ SO50 9QP
 ])
+
+#let QuickQuestions(
+  firstSet:(([],[]),),
+  secondSet:(([],[]),),
+) = [
+  #let n = firstSet.len() + secondSet.len()
+  #let height = 95%
+  == #n Quick Questions
+  #notes
+  #place(dy:0.5em)[
+    #only(1)[#grid(columns:(1fr,1fr),rows:(height),inset:15pt,stroke:2pt+fadedBlue,
+    [
+      #for q in firstSet {
+        [+ #q.at(0)#v(1em)]
+      }
+    ],[
+      #set enum(start:firstSet.len()+1)
+      #for q in secondSet {
+        [+ #q.at(0)#v(1em)]
+      }
+    ])]
+    #only(2)[
+      
+      #grid(columns:(1fr,1fr),rows:(height),inset:15pt,stroke:2pt+fadedBlue,
+    [
+      #for q in firstSet {
+        [+ #text(red)[#q.at(1)#v(1em)]]
+      }
+    ],[
+      #set enum(start:firstSet.len()+1)
+      #for q in secondSet {
+        [+ #text(red)[#q.at(1)#v(1em)]]
+      }
+    ])]]
+]
