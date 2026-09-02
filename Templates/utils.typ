@@ -84,6 +84,7 @@
 #let red-book = place(top + right, dy: -1em, image(width:13%, "red-book.png"))
 #let notes = place(top + right, dx:1em,dy: -1em, image(width:13%, "note-paper.svg"))
 #let TLFMaths = place(top + right, dy: -1em, image(width:35%, "TLMathsFMBook.png"))
+#let TLMaths = image("TLMathsBook.png")
 #let GClass = place(top + right, dy:-1.5em,dx:1em,image(width:20%,"GClassLogo.svg"))
 #let Comp = place(top + right, dy:-1em,image(width:15%,"computer.svg"))
 #let discuss = place(top + right, dy: -1em, image(width: 13%, "discuss.svg"))
@@ -101,8 +102,8 @@
   #place(top+left,dy:-2em,dx:-2em,rect(stroke:0pt,fill:rgb(218,227,243),width:100%+4em,height:100%+4em))
   #place(top+left,dy:-1.3em,dx:-1.3em,rect(stroke:BPVGreen+10pt, width:100%+2.6em,height:100%+2.6em))
   #place(center,dy:-7em,dx:-11em,image("../Templates/BPRLogo.png"))
-  #place(left,dx:4.2em,dy:0.5em,text(size:42pt,fill: BPVGreen,stroke:1pt+BPVGreen,[#title]))
-  #place(top+left,[#body])
+  #place(left,dx:5em,dy:0.5em,text(size:42pt,fill: BPVGreen,stroke:1pt+BPVGreen,[#title]))
+  #place(top+left,dx:0em,dy:5.5em,[#body])
 ]
 
 #let BPSlide(body) = [
