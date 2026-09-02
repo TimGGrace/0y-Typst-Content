@@ -81,6 +81,7 @@
 
 #let mwb = place(top + right, dy: -1em, image(width: 13%, "mwb.png"))
 #let yellow-book = place(top + right, dy: -1em, image(width: 13%, "yellow-book.png"))
+#let green-book = place(top + right, dy: -1em, image(width: 13%, "green-book.png"))
 #let red-book = place(top + right, dy: -1em, image(width:13%, "red-book.png"))
 #let notes = place(top + right, dx:1em,dy: -1em, image(width:13%, "note-paper.svg"))
 #let TLFMaths = place(top + right, dy: -1em, image(width:35%, "TLMathsFMBook.png"))
