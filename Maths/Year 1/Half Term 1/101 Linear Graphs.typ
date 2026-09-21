@@ -1,5 +1,5 @@
 #import "../../../Templates/template.typ": *
-#show: simple-theme.with( aspect-ratio:"16-9",
+#show: simple-theme.with( aspect-ratio:"4-3",
                           config-colors(primary:fadedBlue))
 
 #QuickQuestions(
@@ -12,7 +12,7 @@
   ),
   secondSet:(
     ([Simplify\ $5a^2 b^3 c^5 times 3a b^(-2) c^3$],[$15a^3 b c^8$]),
-    ([Find the exact area #bold[and] perimeter of a sector with a radius of $5$ cm and angle $60^o$],[Area: $frac(60,360) times pi times 5^2 = frac(25,6) pi "cm"^2$\ Perimeter: $frac(60,360) times pi times 10 + 10$\ $quad = (5/3 pi + 10) "cm"$]),
+    ([Find the exact area #bold[and] perimeter of a sector with a radius of $5$ cm and angle $60^o$],[Area:\ $frac(60,360) times pi times 5^2 = frac(25,6) pi "cm"^2$\ Perimeter:\ $frac(60,360) times pi times 10 + 10$\ $quad = (5/3 pi + 10) "cm"$]),
     ([Town B is North East of Town A. State the bearing of Town A from Town B.],[$225^o$]),
   )
 )
@@ -37,7 +37,7 @@
 #place(dy:5em,dx:-1em,)[
 #note[$in$ means 'belongs to' and $ZZ$ represents the set of all integers.]]
 
-== Coordinate Geometry with $(x_1,y_1)$ and $(x_2,y_2)$
+== Coordinate Geometry with\ $(x_1,y_1)$ and $(x_2,y_2)$
 #yellow-book
 #only(1)[Can you state the formulae to find the following:
 1. The distance from $(x_1,y_1)$ to $(x_2,y_2)$
@@ -74,7 +74,7 @@
   )
 ]
 
-== Here are the equations of six lines. Are any of them parallel or perpendicular to each other?
+== Here are the equations of six lines.\ Are any of them parallel or\ perpendicular to each other?
 #notes
 #set enum(numbering:"A")
 + $y = -3x + 8$
@@ -89,13 +89,13 @@
 
 + $x=-3y+2$
 #only(1)[
-  #place(dy:-8em,dx:15em,
+  #place(dy:-8em,dx:10em,
   rect(inset:15pt,radius:20pt,stroke:2pt+orange,fill:orange.lighten(70%),
     [HINT: You might want to rearrange\ them first!]
   ))
 ]
 #only(2)[
-  #place(dy:-8em,dx:15em,
+  #place(dy:-10em,dx:15em,
   text(red)[
     #bold[Parallel:]\
     A&B are parallel\
@@ -114,14 +114,6 @@
 #yellow-book
 $
   y = m_1 x + c_1 "and" y=m_2 x + c_2
-$#pause
-Two lines are parallel if they have the same gradient.
-$
-  m_1 = m_2
-$#pause
-Two lines are perpendicular if their gradients are #bold[negative reciprocals] of one another.
-$
-  m_1 = -frac(1,m_2) "or" m_1 times m_2 = -1
 $
 
 == Example
@@ -131,27 +123,7 @@ $
 
 #text(purple)[
   First, we re-write both equations into the form $y = m x + c$
-]#pause
-#text(red)[
-  $
-    4x - y = 2 & => y = 4x - 2\
-    x+4y=3 & => y = -1/4 x + 3/4
-  $
-]#pause
-#text(purple)[
-  Multiplying the gradients together:
-]#pause
-#text(red)[
-  $
-    4 times -1/4 = -1
-  $
 ]
-#text(red)[As the product of the gradients is $-1$, the two lines are perpendicular.]#pause
-#place( dy:-3em,dx:15em,
-  rect( inset:15pt,radius:20pt,stroke:2pt+green,fill:green.lighten(70%),
-    [NOTE: Never forget to conclude.]
-  )
-)
 
 #MWBQ(
   title:"Coordinate Geometry",
@@ -168,29 +140,15 @@ $
 )
 
 == Sketching vs Plotting
-- A sketch is a free-hand 'idea' of what the graph looks like, identifying important points.#pause
-- It does not need to be to scale, but should still be fairly sensible.#pause
-- A plot is a graph drawn on square paper to scale.#pause
+- A sketch is a free-hand 'idea' of what the graph looks like, identifying important points.
+- It does not need to be to scale, but should still be fairly sensible.
+- A plot is a graph drawn on square paper to scale.
 - The most likely situation where you will be asked to plot points accurately is during a Reduction to Linear Form problem (a topic we will meet later in the course).
 
 == Example
 #yellow-book
 Sketch $y = 2x + 3$#pause
-
-#text(purple)[Determine where the line crosses the $y$-axis by using $x=0$]\ #pause
-#text(red)[
-  $
-    y_(x=0) = 2(0) + 3 = 3
-  $
-]#pause
-
-#text(purple)[Determine where the line crosses the $x$-axis by using $y=0$]\ #pause
-#text(red)[
-  $
-    @(y=0) 0 = 2x + 3 => 2x = -3 => x = -3/2
-  $
-]#pause
-#place(dy:-12em,dx:8em,
+#place(dy:1em,dx:8em,
 cetz.canvas(length: 12cm, background:white,{
   import cetz.draw: *
   import cetz-plot: *
@@ -213,21 +171,7 @@ cetz.canvas(length: 12cm, background:white,{
 == Example 2
 #yellow-book
 Sketch $2x + 3y = 12$#pause
-
-#text(purple)[Determine where the line crosses the $y$-axis by using $x=0$]\ #pause
-#text(red)[
-  $
-    @(x=0) 2(0) + 3y = 12 => y = 4
-  $
-]#pause
-
-#text(purple)[Determine where the line crosses the $x$-axis by using $y=0$]\ #pause
-#text(red)[
-  $
-    @(y=0) 2x + 3(0) = 12 => x = 6
-  $
-]#pause
-#place(dy:-12em,dx:8em,
+#place(dy:1em,dx:8em,
 cetz.canvas(length: 12cm, background:white,{
   import cetz.draw: *
   import cetz-plot: *
@@ -393,7 +337,7 @@ cetz.canvas(length: 3cm, background:white,{
 
 == Perpendicular Bisectors
 #yellow-book
-The *Perpendicular Bisector* of A and B is the line that passes\ through the midpoint of A and B, and is at right angles to the\ line through A and B.
+The *Perpendicular Bisector* of A and B is the line that\ passes through the midpoint of A and B, and is at\ right angles to the line through A and B.
 
 #place(center,dy:1em,)[#cetz.canvas(length: 8cm,{
   import cetz.draw: *

@@ -1,5 +1,5 @@
 #import "../../../Templates/template.typ": *
-#show: simple-theme.with( aspect-ratio:"16-9",
+#show: simple-theme.with( aspect-ratio:"4-3",
                           config-colors(primary:fadedBlue))
 
 #QuickQuestions(
@@ -138,8 +138,7 @@ What features do both of these curves have?
       [They both have a vertical line of symmetry]
     )
   )
-]
-#only("3-")[
+
   #place( dy:-6em, dx:5em,
     rect( inset:15pt,radius:20pt,stroke:orange+2pt,fill:orange.lighten(70%),
       [They both have one vertex / turning point / stationary point]
@@ -147,23 +146,8 @@ What features do both of these curves have?
   )
 ]
 
-== Factorise
-$ x^2 + 2x - 3 $#pause
-#text(red)[$ =(x+3)(x-1) $]
-What does this tell us about the curve $y=x^2 +2x - 3$?#pause
-#yellow-book
-
-Factorising tells us where the curve crosses the $x$-axis:
-$ "at" -3 "and" +1 $
-
-== Complete the square for
-$ x^2 + 2x - 3 $#pause
-#text(red)[$ =(x + 1)^2 - 4 $]
-What does this tell us about the curve $y=x^2 +2x - 3$?#pause
-#yellow-book
-
-Completing the square tells us the coordinates of the vertex:
-$ "at" (-1, -4) $
+== Factorise & Complete the Square
+$ x^2 + 2x - 3 $
 
 == Example: Sketch the Curve
 #yellow-book
@@ -175,9 +159,9 @@ Factorised form: $y=(x+3)(x-1)$#pause
 So we need:
 - $x$-intercepts: $-3, 1$
 - $y$-intercept: $-3$
-- Vertex: $(-1,-4)$#pause
+- Vertex: $(-1,-4)$
 
-#place(dy:-8em,dx:15em,
+#place(dy:-5em,dx:15em,
   cetz.canvas(length: 9cm, background:white,{
   import cetz.draw: *
   import cetz-plot: *
@@ -389,7 +373,7 @@ $#pause
   5. Using 'GRAPHER', for vertex.
 ])
 
-== Using your calculator, factorise and write the\ following in completed square form:
+== Using your calculator, factorise and write\ the following in completed square form:
 #yellow-book
 $
   64x^2 - 40x - 6
@@ -479,11 +463,11 @@ $#pause
 == "Exam"ple question
 #notes
 Edexcel AS-Level 2018 Paper 1
-#let scale=140%
-#only(1)[#place( dx:-1.5em, dy:0.5em,
+#let scale=110%
+#only(1)[#place( dx:-2em, dy:0.5em,
     image("img/102 exam_question.png",height:scale)
   ) 
-#place( dx:16em, dy:-9em,
+#place( dx:14em, dy:-9em,
     image("img/102 exam_question.png",height:scale)
   )
 ]
