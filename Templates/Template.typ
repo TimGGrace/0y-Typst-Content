@@ -344,3 +344,22 @@
       }
     ])]]
 ]
+
+
+#let FloatTable(mantissa: "1001", exponent: "001") = {
+  let mant = ()
+  for a in mantissa {mant.push($#a$)}
+  let exp = ()
+  for a in exponent {exp.push($#a$)}
+  
+  return table(
+columns:range(mantissa.len() + exponent.len() + 1).map(_ => 1fr), 
+inset:5pt,align:center,
+  ..mant,
+  table.cell(stroke:(top: 0pt, bottom:0pt))[],
+  ..exp,
+  table.cell(colspan:mantissa.len(),stroke:(left: 0pt, right: 0pt, bottom: 0pt))[Mantissa],
+  table.cell(stroke:0pt)[],
+  table.cell(colspan:exponent.len(),stroke:(left: 0pt, right: 0pt, bottom: 0pt))[Exponent],
+  
+  )}
