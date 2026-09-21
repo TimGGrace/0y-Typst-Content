@@ -1,5 +1,5 @@
 #import "../../../Templates/template.typ": *
-#show: simple-theme.with( aspect-ratio:"16-9",
+#show: simple-theme.with( aspect-ratio:"4-3",
                           config-colors(primary:fadedBlue))
 
 
@@ -48,10 +48,10 @@ This is where you will write down all of your textbook exercises, workings etc. 
 #place(dy:1em,
   image("img/numworks.png")
 )
-#place(dy:1em,dx:8em,[
+#place(dy:1em,dx:11em,[
   #text(red)[#bold[£86 from the college shop.]]
 
-  There is a free app with full calculator functionality\ you can download onto your phone, AND a free to use\ browser-based simulator. (Try before you buy!)
+  There is a free app with full calculator\ functionality you can download onto\ your phone, AND a free to use\ browser-based simulator.\ (Try before you buy!)
   
   The graphing and statistical functions\ are *incredibly* useful.
 ])
@@ -59,12 +59,12 @@ This is where you will write down all of your textbook exercises, workings etc. 
 #place(dy:1em,
   image("img/casio.png")
 )
-#place(dy:1em,dx:8em,[
+#place(dy:1em,dx:12em,[
   #text(red)[#bold[NOTE: Not the GCSE calculator]]
 
-  The alternative calculator is the Casio *fx-991CW*
+  The alternative calculator\ is the Casio *fx-991CW*
 
-  Other models will not have the functionality you need.
+  Other models will not have\ the functionality you need.
 
   The college shop sells these too!
 ])
@@ -73,15 +73,15 @@ This is where you will write down all of your textbook exercises, workings etc. 
 #place(dy:1em,
   image("img/textbook.png")
 )
-#place(dy:1em,dx:12em,[
-  It costs £15 from the college shop and will\ cover the whole two years of study!
+#place(dy:1em,dx:15em,[
+  It costs £15 from the college\ shop and will cover the whole\ two years of study!
 
-  - Finish off exercises you start in class.
-  - There are also copies in the library.
+  - Finish off exercises you\ start in class.
+  - There are also copies\ in the library.
 ])
 == bpmaths.com
 #Comp
-bpmaths.com is a Google Site with all of the resources you\ need this year, including all of your Key Assignments\ (weekly homework), past papers, and a host of other resources.
+bpmaths.com is a Google Site with all of the resources\ you need this year, including all of your Key Assignments\ (weekly homework), past papers, and a host of other resources.
 #place(dy:2em,
 grid(columns:2, column-gutter: 20pt,
   image("img/bpmaths_logo.png", width:100%),
@@ -93,7 +93,7 @@ grid(columns:2, column-gutter: 20pt,
 
 == Google Classroom
 #GClass
-Every week you will complete a Key Assignment and submit it via Google Classroom.
+Every week you will complete a Key Assignment and\ submit it via Google Classroom.
 
 #underline[Let's take a look!]
 
@@ -137,7 +137,7 @@ You will need your college account to access it.
 
 == Enrolment Work & KA01
 #only(1)[#place(center+horizon)[
-  #image("img/ka_example.png",height:120%)
+  #image("img/ka_example.png",height:100%)
 ]]
 #only(2)[
   #GClass
@@ -152,20 +152,20 @@ You will need your college account to access it.
 
 == The secrets to be successful at A-Level Maths:
 #text(28pt)[#emoji.calendar Be here.\ ]
-#text(gray.darken(50%))[(Aim for 100% attendance)]#pause
+#text(gray.darken(50%))[(Aim for 100% attendance)]
 
 #text(28pt)[#emoji.pen Do the work.\ ]
-#text(gray.darken(50%))[(100% Homework completion)]#pause
+#text(gray.darken(50%))[(100% Homework completion)]
 
 #text(28pt)[#emoji.calendar Get unstuck.\ ]
 #text(gray.darken(50%))[(Ask questions when you don't understand!)]
 
 == Universities are looking for people who can:
 #text(28pt)[#emoji.magnify Tackle unfamiliar problems.\ ]
-#text(gray.darken(50%))[(and not just repeat methods)]#pause
+#text(gray.darken(50%))[(and not just repeat methods)]
 
 #text(28pt)[#emoji.bubble.speech Explain their thinking clearly.\ ]
-#text(gray.darken(50%))[(using mathematical language)]#pause
+#text(gray.darken(50%))[(using mathematical language)]
 
 #text(28pt)[#emoji.arm.muscle Persist when things get difficult.\ ]
 #text(gray.darken(50%))[(and learn from mistakes)]
